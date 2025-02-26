@@ -3,7 +3,7 @@
 These **tutorials** detail an advanced usage of the HARFANG API in **Python** and **Lua**. The aim is to demonstrate the combination of HARFANG with advanced systems found in the Lua or Python ecosystem, in terms of [AI](https://pypi.org/project/opencv-python/), [multitasking](https://en.wikipedia.org/wiki/Coroutine), etc.
 
 ## Screenshots
-* Framebuffer to [OpenCV](https://pypi.org/project/opencv-python/)
+* Framebuffer to [OpenCV](https://pypi.org/project/opencv-python/) (Python only)
 ![Buffer to OpenCV](screenshots/buffer_to_opencv_example.png)
 
 
@@ -20,11 +20,11 @@ After the compilation process finishes, you will see a `resources_compiled` fold
 You can now execute the tutorials from the folder you unzipped them to.
 
 ```bash
-D:\tutorials-hg2>python buffer_to_opencv.py
+D:\tutorials-hg2>python scene_coroutine.py
 ```
 or
 ```bash
-D:\tutorials-hg2>lua buffer_to_opencv.lua
+D:\tutorials-hg2>lua scene_coroutine.lua
 ```
 
 Alternatively, you can open the tutorial folder using [Visual Studio Code](https://code.visualstudio.com/) and use the provided debug targets to run the tutorials.
