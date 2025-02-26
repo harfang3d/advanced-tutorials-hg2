@@ -2,6 +2,11 @@
 
 These **tutorials** detail an advanced usage of the HARFANG API in **Python** and **Lua**. The aim is to demonstrate the combination of HARFANG with advanced systems found in the Lua or Python ecosystem, in terms of [AI](https://pypi.org/project/opencv-python/), [multitasking](https://en.wikipedia.org/wiki/Coroutine), etc.
 
+## Screenshots
+* Buffer to OpenCV
+![Buffer to OpenCV](screenshots/buffer_to_opencv_example.png)
+
+
 To run the tutorials : 
 
 1. Download or clone this repository to your computer _(eg. in `d:/advanced-tutorials-hg2`)_.
