@@ -20,11 +20,11 @@ After the compilation process finishes, you will see a `resources_compiled` fold
 You can now execute the tutorials from the folder you unzipped them to.
 
 ```bash
-D:\tutorials-hg2>python scene_coroutine.py
+D:\advanced-tutorials-hg2>python scene_coroutine.py
 ```
 or
 ```bash
-D:\tutorials-hg2>lua scene_coroutine.lua
+D:\advanced-tutorials-hg2>lua scene_coroutine.lua
 ```
 
 Alternatively, you can open the tutorial folder using [Visual Studio Code](https://code.visualstudio.com/) and use the provided debug targets to run the tutorials.
