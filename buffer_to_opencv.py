@@ -123,9 +123,9 @@ def main():
 				cv2.imshow("Image Captured", image)
 
 		# ImGui interface for toggling rotation and OpenCV borders
-		if hg.ImGuiBegin('Open CV infos', True, hg.ImGuiWindowFlags_NoResize | hg.ImGuiWindowFlags_NoMove):
+		if hg.ImGuiBegin('OpenCV infos', True, hg.ImGuiWindowFlags_NoResize | hg.ImGuiWindowFlags_NoMove):
 			enable_rotation_button_clicked, enable_rotation = hg.ImGuiCheckbox("Enable Rotation", enable_rotation)
-			show_open_cv_button_clicked, show_open_cv_border = hg.ImGuiCheckbox("Show open cv borders", show_open_cv_border)
+			show_open_cv_button_clicked, show_open_cv_border = hg.ImGuiCheckbox("Show OpenCV borders", show_open_cv_border)
 
 			if decoded_text:
 				hg.ImGuiText(" >> QR Code detected:")
