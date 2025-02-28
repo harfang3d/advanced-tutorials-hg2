@@ -1,2 +1,2 @@
-python -m harfang.bin assetc resources
+python -m harfang.bin assetc -daemon resources
 pause
