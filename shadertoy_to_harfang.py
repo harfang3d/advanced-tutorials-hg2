@@ -14,7 +14,7 @@ hg.RenderReset(res_x, res_y, hg.RF_MSAA4X | hg.RF_MaxAnisotropy)
 vtx_layout = hg.VertexLayoutPosFloatTexCoord0UInt8()
 plane_mdl = hg.CreatePlaneModel(vtx_layout, 1, 1, 1, 1)
 
-shader = hg.LoadProgramFromFile('resources_compiled_gl/shaders/shadertoyCubesAreDancing')
+shader = hg.LoadProgramFromFile('resources_compiled/shaders/shadertoyCubesAreDancing')
 
 while not hg.ReadKeyboard().Key(hg.K_Escape) and hg.IsWindowOpen(win):
     dt = hg.TickClock()
