@@ -9,10 +9,10 @@ $input v_texcoord0
 #define rot(a) mat2(cos(a),sin(a),-sin(a),cos(a))
 #define crep(p,c,l) p=p-c*clamp(round(p/c),-l,l)
 
-#define dt(sp,off) frac((iTime+off)*sp)
+#define dt(sp,off) frac((iTime.x+off)*sp)
 #define bouncy(sp,off) sqrt(sin(dt(sp,off)*PI))
 
-uniform float iTime;
+uniform vec4 iTime;
 
 struct ObjectData
 {
@@ -201,6 +201,7 @@ void main()
         float light = max(dot(n,l),0.);
         col = mix(O.cs,O.cl, light);
     }
-    //gl_FragColor = vec4(sqrt(col),1.);
-    gl_FragColor = vec4(mod(iTime, 1.0), 0.0, 0.0, 1.0);
+
+    gl_FragColor = vec4(sqrt(col),1.0);
+
 }
