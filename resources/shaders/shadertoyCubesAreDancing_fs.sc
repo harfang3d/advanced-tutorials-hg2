@@ -1,3 +1,15 @@
+// Code by Flopine
+
+// Thanks to wsmind, leon, XT95, lsdlive, lamogui,
+// Coyhot, Alkama,YX, NuSan, slerpy and wwrighter for teaching me
+
+// Thanks LJ for giving me the spark :3
+
+// Thanks to the Cookie Collective, which build a cozy and safe environment for me
+// and other to sprout :)  https://twitter.com/CookieDemoparty
+
+// Porting for Harfang by Angaros
+
 $input v_texcoord0
 
 #include <bgfx_shader.sh>
@@ -9,7 +21,7 @@ $input v_texcoord0
 #define rot(a) mat2(cos(a),sin(a),-sin(a),cos(a))
 #define crep(p,c,l) p=p-c*clamp(round(p/c),-l,l)
 
-#define dt(sp,off) frac((iTime.x+off)*sp)
+#define dt(sp,off) fract((iTime.x+off)*sp)
 #define bouncy(sp,off) sqrt(sin(dt(sp,off)*PI))
 
 uniform vec4 iTime;
@@ -61,13 +73,13 @@ ObjectData prim1(vec3 p)
     float per = 0.9;
     float id = round(p.y/per);
     mat2 _dt = rot(sin(dt(0.8,id*1.2)*TAU));
-    p.xz = mul(_dt, p.xz); // utiliser mul a la place d'un * pour les vecteurs.
+    p.xz = mul(_dt, p.xz); // Use mul instead of "*" to multiply
     crep(p.y, per,4.0);
-    mo(p.xz,vec2(0.3, 0.3)); // déclarer les deux valeurs du vecteur
+    mo(p.xz,vec2(0.3, 0.3)); // Declare both values of vec2
     p.x += bouncy(2.0,0.0)*0.8;
     float pd = box(p,vec3(1.5,0.2,0.2));
 
-    ObjectData result; //briser la structure d'une struct pour la return
+    ObjectData result; //Split structure to return it.
     result.d = pd;
     result.cs = vec3(0.5, 0.0, 0.0);
     result.cl = vec3(1.0, 0.5, 0.9);
