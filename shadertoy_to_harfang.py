@@ -42,10 +42,7 @@ qr_tdhooper = hg.LoadTextureFromAssets("pictures/DvdBounce.png", hg.TF_WClamp)
 while not hg.ReadKeyboard().Key(hg.K_Escape) and hg.IsWindowOpen(win):
     dt = hg.TickClock()
     view_id = 0
-    # quad_uniform_set_texture_list.clear()
-    # quad_uniform_set_texture_list.push_back(hg.MakeUniformSetTexture("s_tex", texture[0], 0))
-    #Creating a uniform value that represent programs clock to use it into shadertoyCubesAreDancing.fs
-    #Need vec4 because float are not supported by Bgfx.
+
     val_uniforms = [hg.MakeUniformSetValue("iTime", hg.Vec4(hg.time_to_sec_f(hg.GetClock()), 0.0, 0.0, 0.0)),
                     hg.MakeUniformSetValue("iResolution", hg.Vec4(res_x, res_y, 0.0, 0.0)),
                     hg.MakeUniformSetValue("iChannelResolution", hg.Vec4(texture_info.width, texture_info.height, 0.0, 0.0))]
@@ -61,13 +58,10 @@ while not hg.ReadKeyboard().Key(hg.K_Escape) and hg.IsWindowOpen(win):
     hg.DrawModel(view_id, plane_mdl, shader_dacingCubes, val_uniforms, [hg.MakeUniformSetTexture("s_tex", texture, 0)],
                  hg.TransformationMat4(hg.Vec3(0.5, 0.25, 0), hg.Vec3(-math.pi / 2, 0.0, 0.0)))
 
-    #view_id += 1
-
     hg.DrawModel(view_id, plane_mdl_ui, shader_text, text_val_uniforms, [hg.MakeUniformSetTexture("s_tex", qr_tdhooper[0], 0)],
                  hg.TransformationMat4(hg.Vec3(-0.15, -0.15, 0), hg.Vec3(-math.pi / 2, 0.0, 0.0), hg.Vec3(0.15, 0.15, 0.15)))
 
 
-    #view_id += 1
     hg.DrawModel(view_id, plane_mdl_ui, shader_text, text_val_uniforms, [hg.MakeUniformSetTexture("s_tex", qr_flopine[0], 0)],
                  hg.TransformationMat4(hg.Vec3(0.85, -0.15, 0), hg.Vec3(-math.pi / 2, 0.0, 0.0),  hg.Vec3(0.15, 0.15, 0.15)))
 
