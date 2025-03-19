@@ -25,6 +25,7 @@ $input v_texcoord0
 #define bouncy(sp,off) sqrt(sin(dt(sp,off)*PI))
 
 uniform vec4 iTime;
+uniform vec4 iResolution;
 
 struct ObjectData
 {
@@ -191,7 +192,10 @@ vec3 getnorm (vec3 p)
 
 void main()
 {
-    vec3 ro = vec3((v_texcoord0-vec2(0.5, 0.5))*30.,-30.0),rd = vec3(0.,0.,1.),
+    vec2 fragCoord = v_texcoord0.xy * iResolution.xy;
+    vec2 uv = (2. * fragCoord.xy - iResolution.xy) / iResolution.y;
+
+    vec3 ro = vec3(uv*5., -30.),rd = vec3(0.,0.,1.),
     p = ro,
     col = vec3(0.0, 0.0, 0.0),
     l = normalize(vec3(1.0,1.4,-2.0));
@@ -215,5 +219,5 @@ void main()
     }
 
     gl_FragColor = vec4(sqrt(col),1.0);
-
 }
+
