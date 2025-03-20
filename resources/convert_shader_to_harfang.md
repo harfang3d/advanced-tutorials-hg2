@@ -1,5 +1,7 @@
 # Convert SHADERTOY shader to HARFANG® API
 
+> In order to see if GLSL is portable in BGFX GLSL or BGFX HLSL, we decided to use a Shadertoy shader (that is using GLSL) and make it viable in HARFANG API (which is using BGFX)
+
 In GLSL you can do this *= but not in HLSL so we are moving 
 
  - from this :
