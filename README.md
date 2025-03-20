@@ -6,6 +6,10 @@ These **tutorials** detail an advanced usage of the HARFANG API in **Python** an
 * Framebuffer to [OpenCV](https://pypi.org/project/opencv-python/) (Python only)
 ![Buffer to OpenCV](screenshots/buffer_to_opencv_example.png)
 
+* Shadertoy to HARFANG® 
+![Shadertoy to HARFANG](screenshots/shadertoy_to_harfang.png)
+
+Click [here](resources/convert_shader_to_harfang.md) for more infos.
 
 ## To run the tutorials : 
 
