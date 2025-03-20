@@ -54,20 +54,19 @@ while not hg.ReadKeyboard():Key(hg.K_Escape) and hg.IsWindowOpen(win) do
     hg.DrawModel(view_id, plane_mdl, shader_dancingCubes, val_uniforms, {hg.MakeUniformSetTexture("s_tex", texture, 0)},
                 hg.TransformationMat4(hg.Vec3(0.5, 0.25, 0), hg.Vec3(-math.pi / 2, 0.0, 0.0)))
 
-    hg.DrawModel(view_id, plane_mdl_ui, shader_text, text_val_uniforms, {hg.MakeUniformSetTexture("s_tex", qr_flopine, 0)},
-                hg.TransformationMat4(hg.Vec3(-0.15, 0.15, 0), hg.Vec3(-math.pi / 2, 0.0, 0.0), hg.Vec3(0.15, 0.15, 0.15)))
     hg.DrawModel(view_id, plane_mdl_ui, shader_text, text_val_uniforms, {hg.MakeUniformSetTexture("s_tex", qr_tdhooper, 0)},
+                hg.TransformationMat4(hg.Vec3(-0.15, -0.15, 0), hg.Vec3(-math.pi / 2, 0.0, 0.0), hg.Vec3(0.15, 0.15, 0.15)))
+    hg.DrawModel(view_id, plane_mdl_ui, shader_text, text_val_uniforms, {hg.MakeUniformSetTexture("s_tex", qr_flopine, 0)},
                 hg.TransformationMat4(hg.Vec3(0.85, -0.15, 0), hg.Vec3(-math.pi / 2.0, 0.0, 0.0), hg.Vec3(0.15, 0.15, 0.15)))
 
     view_id = view_id + 1
 
     hg.SetView2D(view_id, 0, 0, res_x, res_y, -1, 1, hg.CF_Depth, hg.Color.Black, 1, 0)
 
-    hg.DrawText(view_id, font, 'tdhooper - DVD Bounce', font_program, 'u_tex', 0, hg.Mat4.Identity,
-                hg.Vec3(140, res_y - 280, 0), hg.DTHA_Left, hg.DTVA_Bottom, text_uniform_values, {}, text_render_state)
-
     hg.DrawText(view_id, font, 'Flopine - Cubes are dancing', font_program, 'u_tex', 0, hg.Mat4.Identity,
                 hg.Vec3(750, res_y - 280, 0), hg.DTHA_Left, hg.DTVA_Bottom, text_uniform_values, {}, text_render_state)
+    hg.DrawText(view_id, font, 'tdhooper - DVD Bounce', font_program, 'u_tex', 0, hg.Mat4.Identity,
+                hg.Vec3(140, res_y - 280, 0), hg.DTHA_Left, hg.DTVA_Bottom, text_uniform_values, {}, text_render_state)
 
     hg.DrawText(view_id, font, 'SHADERTOY TO HARFANG PORTING', font_program, 'u_tex', 0, hg.Mat4.Identity,
                 hg.Vec3((res_y / 2) + 50, res_y - 120, 0), hg.DTHA_Left, hg.DTVA_Bottom, text_uniform_values, {}, text_render_state)
@@ -77,6 +76,5 @@ while not hg.ReadKeyboard():Key(hg.K_Escape) and hg.IsWindowOpen(win) do
 end
 
 hg.RenderShutdown() 
-
 
 
