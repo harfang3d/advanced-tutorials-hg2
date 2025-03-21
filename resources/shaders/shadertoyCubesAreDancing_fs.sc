@@ -202,7 +202,6 @@ void main()
     vec3 p = ro;
     vec3 col = vec3(col_composantes, col_composantes, col_composantes);
     vec3 l = normalize(vec3(1.0,1.4,-2.0));
-
     ObjectData O;
     bool hit = false;
 
@@ -223,6 +222,4 @@ void main()
 
     gl_FragColor = vec4(sqrt(col),1.0);
 }
-
-
 
