@@ -195,10 +195,13 @@ void main()
     vec2 fragCoord = v_texcoord0.xy * iResolution.xy;
     vec2 uv = (2. * fragCoord.xy - iResolution.xy) / iResolution.y;
 
-    vec3 ro = vec3(uv*5., -30.),rd = vec3(0.,0.,1.),
-    p = ro,
-    col = vec3(0.0, 0.0, 0.0),
-    l = normalize(vec3(1.0,1.4,-2.0));
+    float col_composantes = sin(length(uv) * 200.0 + iTime.x * 15.0) * sin(length(uv) * 123.4574 + iTime.x * 5.125478) * (1-length(uv * cos(iTime.x)));
+
+    vec3 ro = vec3(uv*5., -30.);
+    vec3 rd = vec3(0.,0.,1.);
+    vec3 p = ro;
+    vec3 col = vec3(col_composantes, col_composantes, col_composantes);
+    vec3 l = normalize(vec3(1.0,1.4,-2.0));
 
     ObjectData O;
     bool hit = false;
@@ -220,4 +223,6 @@ void main()
 
     gl_FragColor = vec4(sqrt(col),1.0);
 }
+
+
 
