@@ -2,8 +2,6 @@
 -- Licensed under the MIT license. See LICENSE file in the project root for details.
 hg = require("harfang")
 
-print(hg.GetCurrentWorkingDirectory())
-
 hg.InputInit()
 hg.WindowSystemInit()
 

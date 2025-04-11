@@ -15,7 +15,7 @@
             "name": "ffmpeg-debug",
             "type": "lua",
             "request": "launch",
-            "program": "${workspaceFolder}/ffmpeg_to_texture.lua",
+            "program": "${workspaceFolder}/ffmpeg_video_to_quad.lua",
             "cwd": "${workspaceFolder}/",
             "stopOnEntry": false,
             "luaexe": "${workspaceFolder}/bin/win64/lua.exe",
