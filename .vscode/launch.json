@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run main",
+            "type": "lua",
+			"request": "launch",
+			"stopOnEntry": false,
+			"program": "${workspaceFolder}/shadertoy_to_harfang.lua",
+			"cwd": "${workspaceFolder}/",
+			"arg": ["--noAAA"],
+			"luaexe": "${workspaceFolder}/hg_lua-win-x64-3.2.7/lua.exe",
+        },
+        {
+            "name": "ffmpeg-debug",
+            "type": "lua",
+            "request": "launch",
+            "program": "${workspaceFolder}/ffmpeg_to_texture.lua",
+            "cwd": "${workspaceFolder}/",
+            "stopOnEntry": false,
+            "luaexe": "${workspaceFolder}/bin/win64/lua.exe",
+        }
+    ]
+}
